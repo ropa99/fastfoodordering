@@ -17,6 +17,7 @@ function Theme() {
       <a href="#" className="btn btn-primary" role="button" data-bs-toggle="button" onClick={switchTheme}>
         {text}
       </a>
+      <h1>Vad händer</h1>
     </div>
   );
 }
