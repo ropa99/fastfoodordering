@@ -19,7 +19,7 @@ function Menu(prod) {
                   <p>
                     {prod.currency} {prod.price}
                   </p>
-                  <a href="#" className="btn btn-dark">
+                  <a href="#" className="btn btn-dark" >
                     Add to order
                   </a>
                 </div>
