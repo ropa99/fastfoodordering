@@ -1,26 +1,33 @@
-import React from "react";
-
-function Menu(props) {
-  console.log(props);
-
+function Menu(prod) {
+  console.log(prod);
+  
   return (
     <div className="container-fluid">
-      <div className="card" width={5}>
-        <img
-          className="card-img-top"
-          src={props.prod[0].img}
-          alt="Food image"
-        ></img>
-        <div className="card-body">
-          <h4 className="card-title">{props.prod[0].title} </h4>
-          <p className="card-text">{props.prod[0].description}</p>
-          <p>
-            {props.prod[0].currency} {props.prod[0].price}
-          </p>
-          <a href="#" className="btn btn-primary">
-            Add to order
-          </a>
-        </div>
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {prod.prod.map((prod, index) => {
+          const cardElement = (
+            <div className="col">
+              <div className="card h-100">
+                <img
+                  src={process.env.PUBLIC_URL + prod.img}
+                  className="card-img-top"
+                  alt="..."
+                />
+                <div className="card-body" key={index}>
+                  <h5 className="card-title">{prod.title}</h5>
+                  <p className="card-text">{prod.description}</p>
+                  <p>
+                    {prod.currency} {prod.price}
+                  </p>
+                  <a href="#" className="btn btn-dark">
+                    Add to order
+                  </a>
+                </div>
+              </div>
+            </div>
+          );
+          return cardElement;
+        })}
       </div>
     </div>
   );

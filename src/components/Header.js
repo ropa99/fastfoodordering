@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../css/darkMode.css";
+//import "../css/darkMode.css";
 
 function Header() {
   const menuText = "Fast Food Menu";
@@ -14,10 +14,10 @@ function Header() {
 
   return (
     <div>
-      <nav className="navbar bg-body-tertiary " data-bs-theme="dark">
+      <nav className="navbar bg-body-tertiary " data-bs-theme={theme}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#" onClick={switchTheme}>
-            Light
+            {theme === "light" ? "Black" : "Light"}
           </a>
         </div>
       </nav>
