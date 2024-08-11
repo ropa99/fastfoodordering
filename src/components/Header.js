@@ -17,7 +17,7 @@ function Header() {
       <nav className="navbar bg-body-tertiary " data-bs-theme={theme}>
         <div className="container-fluid">
           <a className="navbar-brand" href="#" onClick={switchTheme}>
-            {theme === "light" ? "Black" : "Light"}
+            {theme === "light" ? "Dark" : "Light"}
           </a>
         </div>
       </nav>
